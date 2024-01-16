@@ -1,0 +1,14 @@
+{
+  "name": "gitfinder",
+  "version": "1.0.0",
+  "description": "finds github profile",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./index.html"
+  },
+  "author": "jrpranav",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.35.0"
+  }
+}

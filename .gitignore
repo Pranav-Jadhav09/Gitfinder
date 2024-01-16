@@ -1,0 +1,8 @@
+# misc
+.env
+dist
+.DS_Store
+index.txt
+node_modules
+.parcel-cache
+style-guide.md
