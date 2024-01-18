@@ -9,6 +9,7 @@
   "author": "jrpranav",
   "license": "MIT",
   "dependencies": {
-    "core-js": "^3.35.0"
+    "core-js": "^3.35.0",
+    "regenerator-runtime": "^0.14.1"
   }
 }
