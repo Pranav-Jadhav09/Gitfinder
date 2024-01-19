@@ -664,6 +664,19 @@ body {
   color: var(--primary);
 }
 
+.profile-stats .stats-item {
+  color: var(--on-surface-variant);
+}
+
+.profile-stats .body {
+  color: var(--on-background);
+  font-weight: var(--weight-medium);
+}
+
+.profile .footer {
+  display: none;
+}
+
 /* ====== TAB ====== */
 /* ====== ERROR ====== */
 /* ====== FOOTER ====== */
