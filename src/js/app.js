@@ -6,7 +6,6 @@
  * @param {String} eventType String
  * @param {Function} callback Function
  */
-
 const addEventOnElements = function ($elements, eventType, callback) {
   for (const $item of $elements) {
     $item.addEventListener(eventType, callback);
@@ -16,9 +15,7 @@ const addEventOnElements = function ($elements, eventType, callback) {
 /**
  * Header Scroll State
  */
-
 const /** {NodeElement} */ $header = document.querySelector("[data-header]");
-
 window.addEventListener("scroll", function () {
   $header.classList[window.scrollY > 50 ? "add" : "remove"]("active");
 });
@@ -26,7 +23,6 @@ window.addEventListener("scroll", function () {
 /**
  * Search Toggle
  */
-
 const /** {NodeElemet} */ $searchToggler = document.querySelector(
     "[data-search-toggler]"
   );
