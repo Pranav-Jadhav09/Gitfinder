@@ -121,7 +121,7 @@
         <section class="profile" data-profile-card>
           <figure
             class="avatar-circle img-holder"
-            style="--width: 280 --height: 280"
+            style="--width: 280; --height: 280"
           >
             <img
               src="./src/assets/profile.png"
@@ -209,6 +209,249 @@
             <div class="skeleton text-skeleton text-2"></div>
             <div class="skeleton text-skeleton text-3"></div>
           </div> -->
+        </section>
+
+        <!-- Tab -->
+        <section class="tab-continer">
+          <div class="tab-list" aria-label="Tab navigation" role="tablist">
+            <button
+              class="tab-btn"
+              aria-selected="true"
+              role="tab"
+              id="tab-1"
+              tabindex="0"
+              aria-controls="panel-1"
+              data-tab-btn
+            >
+              Repositories
+            </button>
+
+            <button
+              class="tab-btn"
+              aria-selected="false"
+              role="tab"
+              id="tab-2"
+              tabindex="-1"
+              aria-controls="panel-2"
+              data-tab-btn
+              data-forked-tab-btn
+            >
+              Forked
+            </button>
+
+            <button
+              class="tab-btn"
+              aria-selected="false"
+              role="tab"
+              id="tab-3"
+              tabindex="-1"
+              aria-controls="panel-3"
+              data-tab-btn
+              data-follower-tab-btn
+            >
+              Followers
+            </button>
+
+            <button
+              class="tab-btn"
+              aria-selected="false"
+              role="tab"
+              id="tab-4"
+              tabindex="-1"
+              aria-controls="panel-4"
+              data-tab-btn
+              data-following-tab-btn
+            >
+              Following
+            </button>
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-1"
+            aria-labelledby="tab-1"
+            tabindex="0"
+            data-tab-panel
+            data-repo-panel
+          >
+            <h2 class="sr-only">Repositories</h2>
+
+            <article class="card repo-card">
+              <div class="card-body">
+                <a href="#" target="_blank" class="card-title">
+                  <h3 class="title-3">code-bank</h3>
+                </a>
+
+                <p class="card-text">Starter file for code bank project</p>
+
+                <spa class="badge">Public</spa>
+              </div>
+
+              <div class="card-footer">
+                <div class="meta-item">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >code_blocks</span
+                  >
+
+                  <span class="span">CSS</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >star_rate</span
+                  >
+
+                  <span class="span">12</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >family_history</span
+                  >
+
+                  <span class="span">4</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="error-content">
+              <p class="title-1">Oops! :(</p>
+              <p class="text">Doesn't have any public repositories yet.</p>
+            </div>
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-2"
+            aria-labelledby="tab-2"
+            tabindex="0"
+            data-tab-panel
+            data-fork-panel
+            hidden
+          >
+            <h2 class="sr-only">Forked repositories</h2>
+
+            <article class="card repo-card">
+              <div class="card-body">
+                <a href="#" target="_blank" class="card-title">
+                  <h3 class="title-3">code-bank</h3>
+                </a>
+
+                <p class="card-text">Starter file for code bank project</p>
+
+                <spa class="badge">Public</spa>
+              </div>
+
+              <div class="card-footer">
+                <div class="meta-item">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >code_blocks</span
+                  >
+
+                  <span class="span">CSS</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >star_rate</span
+                  >
+
+                  <span class="span">12</span>
+                </div>
+
+                <div class="meta-item">
+                  <span class="material-symbols-rounded" aria-hidden="true"
+                    >family_history</span
+                  >
+
+                  <span class="span">4</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="error-content">
+              <p class="title-1">Oops! :(</p>
+              <p class="text">Doesn't have any forked repositories yet.</p>
+            </div>
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-3"
+            aria-labelledby="tab-3"
+            tabindex="0"
+            data-tab-panel
+            data-follower-panel
+          >
+            <h2 class="sr-only">Followers</h2>
+
+            <article class="card follower-card">
+              <figure class="avatar-circle img-holder">
+                <img
+                  src="./src/assets/follower-img.png"
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  alt="johndoe"
+                  class="img-cover"
+                />
+              </figure>
+
+              <h3 class="card-title">John Doe</h3>
+
+              <button class="icon-btn" aria-label="Go to johndoe profile">
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >link</span
+                >
+              </button>
+            </article>
+
+            <div class="error-content">
+              <p class="title-1">Oops! :(</p>
+              <p class="text">Doesn't have any followers yet.</p>
+            </div>
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-4"
+            aria-labelledby="tab-4"
+            tabindex="0"
+            data-tab-panel
+            data-following-panel
+          >
+            <h2 class="sr-only">Followers</h2>
+
+            <article class="card follower-card">
+              <figure class="avatar-circle img-holder">
+                <img
+                  src="./src/assets/follower-img.png"
+                  width="56"
+                  height="56"
+                  loading="lazy"
+                  alt="johndoe"
+                  class="img-cover"
+                />
+              </figure>
+
+              <h3 class="card-title">John Doe</h3>
+
+              <button class="icon-btn" aria-label="Go to johndoe profile">
+                <span class="material-symbols-rounded" aria-hidden="true"
+                  >link</span
+                >
+              </button>
+            </article>
+
+            <div class="error-content">
+              <p class="title-1">Oops! :(</p>
+              <p class="text">Doesn't have any following yet.</p>
+            </div>
+          </div>
         </section>
       </div>
     </main>
