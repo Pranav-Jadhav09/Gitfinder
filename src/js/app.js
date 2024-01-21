@@ -39,3 +39,33 @@ $searchToggler.addEventListener("click", function () {
 
   $searchField.focus();
 });
+
+/**
+ * Tab Navigation
+ */
+const /** {NodeList} */ $tabBtns = document.querySelectorAll("[data-tab-btn]");
+const /** {NodeList} */ $tabPanels =
+    document.querySelectorAll("[data-tab-panel]");
+
+let /** {NodeElement} */ [$lastActiveTabBtn] = $tabBtns;
+let /** {NodeElement} */ [$lastActiveTabPanel] = $tabPanels;
+
+addEventOnElements($tabBtns, "click", function () {
+  $lastActiveTabBtn.setAttribute("aria-selected", "false");
+  $lastActiveTabPanel.setAttribute("hidden", "");
+
+  this.setAttribute("aria-selected", "true");
+
+  const /** {NodeElement} */ $currentTabPanel = document.querySelector(
+      `#${this.getAttribute("aria-controls")}`
+    );
+
+  $currentTabPanel.removeAttribute("hidden");
+
+  $lastActiveTabBtn = this;
+  $lastActiveTabPanel = $currentTabPanel;
+});
+
+/**
+ * Keyboard Accessibility for Tab Buttons
+ */
