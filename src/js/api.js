@@ -1,7 +1,20 @@
+"use strict";
+
 /**
- * @license MIT
- * @author jrpranav <pranav@jrpranav.com>
- * @copyright jrpranav 2024
+ * Fetch data from server
+ * @param {*} url API URL [required]
+ * @param {*} seccessCalback Success callback [required]
+ * @param {*} errorCallback Error callback [optional]
  */
 
-"use strict";
+export async function fetchData(url, successCallback, errorCallback) {
+  const response = await fetch(url);
+
+  if (response.ok) {
+    const data = await response.json();
+    successCallback(data);
+  } else {
+    const error = await response.json();
+    errorCallback && errorCallback(error);
+  }
+}
