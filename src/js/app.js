@@ -501,3 +501,70 @@ const updateForkRepo = function () {
 };
 
 $forkTabBtn.addEventListener("click", updateForkRepo);
+
+/**
+ * Follower
+ */
+const /** {NodeElement} */ $followerTabBtn = document.querySelector(
+    "[data-follower-tab-btn]"
+  );
+const /** {NodeElement} */ $followerPanel = document.querySelector(
+    "[data-follower-panel]"
+  );
+
+const updateFollower = function () {
+  $followerPanel.innerHTML = `
+  <div class="card follower-skeleton">
+  <div class="skeleton avatar-skeleton"></div>
+  <div class="skeleton title-skeleton"></div>
+</div>
+
+  `.repeat(12);
+
+  fetchData(followerURL, function (data) {
+    $followerPanel.innerHTML = `<h2 class="sr-only">Followers</h2>`;
+
+    if (data.length) {
+      for (const item of data) {
+        const { login: username, avatar_url, url } = item;
+
+        const /** {NodeElement} */ $followerCard =
+            document.createElement("article");
+
+        $followerCard.classList.add("card", "follower-card");
+
+        $followerCard.innerHTML = `
+        <figure class="avatar-circle img-holder">
+        <img
+          src="${avatar_url}\&s=64"
+          width="56"
+          height="56"
+          loading="lazy"
+          alt="${username}"
+          class="img-cover"
+        />
+      </figure>
+
+      <h3 class="card-title">${username}</h3>
+
+      <button class="icon-btn" onclick="updateProfile(\'${url}\')" aria-label="Go to ${username} profile">
+        <span class="material-symbols-rounded" aria-hidden="true"
+          >link</span
+        >
+      </button>
+        `;
+
+        $followerPanel.appendChild($followerCard);
+      }
+    } else {
+      $followerPanel.innerHTML = `
+      <div class="error-content">
+      <p class="title-1">Oops! :(</p>
+      <p class="text">Doesn't have any followers yet.</p>
+    </div>
+      `;
+    }
+  });
+};
+
+$followerTabBtn.addEventListener("click", updateFollower);
