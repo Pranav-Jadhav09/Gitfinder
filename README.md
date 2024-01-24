@@ -10,7 +10,7 @@
 
 A GitFinder application to search GitHub users and view their repositories, followers, and more.
 
-<a href="https://forkify-app-modern.vercel.app/"><strong>➥ Live on vercel.app</strong></a>
+<a href="https://modern-gitfinder.vercel.app/"><strong>➥ Live on vercel.app</strong></a>
 
 </div>
 
@@ -75,7 +75,7 @@ A GitFinder application to search GitHub users and view their repositories, foll
 
 ## Getting Started
 
-This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://gitfinder.vercel.app). or you can find the instructions below
+This project require some prequesites and dependenscies to be installed, you can view it online using this [demo](https://modern-gitfinder.vercel.app/). or you can find the instructions below
 
 > To get a local copy, follow these simple steps :
 
