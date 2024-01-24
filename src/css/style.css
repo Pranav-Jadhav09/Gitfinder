@@ -1046,6 +1046,16 @@ body {
   }
 
   .profile :where(.avatar-circle, .avatar-rounded) {
-    display: 280px;
+    width: 280px;
+  }
+}
+
+/**
+ * Responsive for larger than 1080px screen
+ */
+@media (min-width: 1080px) {
+  /* Tab */
+  .tab-panel .card {
+    max-width: calc(50% - 8px);
   }
 }
