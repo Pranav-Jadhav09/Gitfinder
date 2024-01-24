@@ -1022,3 +1022,30 @@ body {
     display: none;
   }
 }
+
+/**
+ * Responsive for larger than 992px screen
+ */
+@media (min-width: 992px) {
+  /* Reused Style */
+  .container {
+    padding-inline: 32px;
+  }
+
+  /* Components */
+
+  /* Skeleton */
+  .avatar-skeleton {
+    width: 280px;
+    height: 280px;
+  }
+
+  /* Profile */
+  .main .container {
+    grid-template-columns: 280px 1fr;
+  }
+
+  .profile :where(.avatar-circle, .avatar-rounded) {
+    display: 280px;
+  }
+}
