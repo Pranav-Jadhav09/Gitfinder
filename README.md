@@ -27,6 +27,8 @@ A GitFinder application to search GitHub users and view their repositories, foll
 
 <br />
 
+<img src="./src/assets/screen.png" alt="screen"  >
+
 <br />
 
 ### Features
