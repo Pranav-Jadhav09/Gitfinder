@@ -1,7 +1,7 @@
 {
   "name": "gitfinder",
   "version": "1.0.0",
-  "description": "finds github profile",
+  "description": "A GitFinder application to search GitHub users and view their repositories, followers, and more.",
   "scripts": {
     "start": "parcel ./index.html",
     "build": "parcel build index.html --dist-dir ./dist"

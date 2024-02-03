@@ -4,6 +4,13 @@ import { fetchData } from "./api.js";
 import { numberToKilo } from "./module.js";
 
 /**
+ * Footer Set current year
+ */
+const yearEl = document.querySelector("#year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
+/**
  * Add eventlistner on multiple elements
  * @param {NodeList} $elements NodeList
  * @param {String} eventType String
